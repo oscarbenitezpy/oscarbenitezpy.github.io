@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oscar Benítez | SkyOne — Inversiones Inmobiliarias en Paraguay</title>
-  <meta name="description" content="Portafolio de inversiones inmobiliarias en Asunción y Gran Asunción, Paraguay. Asesoría directa con Oscar Benítez en la red SkyOne." />
+  <title>Oscar Benítez | SkyOne Real Estate Latam — Inversiones Inmobiliarias en Paraguay</title>
+  <meta name="description" content="Portafolio de inversiones inmobiliarias en Asunción y Gran Asunción, Paraguay. Asesoría directa con Oscar Benítez en SkyOne Real Estate Latam." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
@@ -12,6 +12,7 @@
     :root {
       --navy-primary: #06326B;
       --navy-deep: #04224A;
+      --logo-dark-bg: #090B0E;
       --slate-dark: #394049;
       --slate-muted: #798490;
       --bg-page: #F4F7FA;
@@ -61,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 76px;
+      min-height: 78px;
       gap: 16px;
       flex-wrap: wrap;
     }
@@ -70,13 +71,32 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .logo-pill-dark {
+      background: var(--logo-dark-bg);
+      padding: 5px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(6, 50, 107, 0.25);
     }
 
     .logo-img {
-      height: 44px;
+      height: 36px;
       width: auto;
       object-fit: contain;
       display: block;
+    }
+
+    .logo-placeholder-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .brand {
@@ -85,7 +105,7 @@
     }
 
     .brand-name {
-      font-size: 1.06rem;
+      font-size: 1.04rem;
       font-weight: 800;
       color: var(--navy-primary);
       text-transform: uppercase;
@@ -124,17 +144,17 @@
       color: var(--white);
     }
 
-    /* Hero en primer plano con foto y logo */
+    /* Hero en primer plano con tarjeta compacta y foto redonda */
     .hero {
-      padding: 52px 0 60px;
+      padding: 56px 0 60px;
       background: linear-gradient(135deg, var(--white) 0%, var(--bg-soft) 100%);
       border-bottom: 1px solid var(--border-soft);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 36px;
+      grid-template-columns: 1.45fr 0.55fr;
+      gap: 32px;
       align-items: center;
     }
 
@@ -142,24 +162,6 @@
       .hero-grid {
         grid-template-columns: 1fr;
       }
-    }
-
-    .hero-top-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .hero-logo {
-      height: 46px;
-      width: auto;
-      object-fit: contain;
-      background: var(--white);
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: 1px solid var(--border-soft);
     }
 
     .badge {
@@ -172,6 +174,7 @@
       background: var(--navy-primary);
       padding: 6px 14px;
       border-radius: 6px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
@@ -242,62 +245,72 @@
       background-color: var(--bg-soft);
     }
 
-    /* Tarjeta de retrato en primer plano */
+    /* Tarjeta compacta con foto redonda */
     .portrait-card {
+      max-width: 250px;
+      width: 100%;
+      justify-self: center;
       background: var(--white);
       border: 1px solid var(--border-soft);
-      border-top: 5px solid var(--navy-primary);
+      border-top: 4px solid var(--navy-primary);
       border-radius: 12px;
-      padding: 18px;
-      box-shadow: 0 10px 26px rgba(6, 50, 107, 0.08);
+      padding: 20px 16px;
+      box-shadow: 0 8px 22px rgba(6, 50, 107, 0.07);
       text-align: center;
     }
 
-    .portrait-frame {
-      width: 100%;
-      aspect-ratio: 4 / 4.3;
-      border-radius: 8px;
+    .avatar-circle {
+      width: 124px;
+      height: 124px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
       overflow: hidden;
       background: var(--bg-soft);
-      border: 1px solid var(--border-soft);
+      border: 3px solid var(--navy-primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
-      margin-bottom: 14px;
+      padding: 8px;
     }
 
-    .portrait-frame img {
+    .avatar-circle.has-photo {
+      padding: 0;
+    }
+
+    .avatar-circle img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 6px;
+      object-position: center 18%;
+      border-radius: 50%;
       display: block;
     }
 
-    .photo-placeholder {
-      font-size: 0.85rem;
-      color: var(--slate-dark);
+    .avatar-placeholder {
+      font-size: 0.74rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: var(--navy-primary);
     }
 
     .portrait-name {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: var(--navy-primary);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .portrait-role {
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--slate-dark);
       text-transform: uppercase;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.06em;
       margin-bottom: 6px;
     }
 
     .portrait-phone {
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       font-weight: 700;
       color: var(--navy-deep);
     }
@@ -428,6 +441,23 @@
       gap: 20px;
     }
 
+    .footer-brand-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo-wrap {
+      background: var(--logo-dark-bg);
+      padding: 5px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
     .footer-flex a {
       color: var(--white);
       font-weight: 700;
@@ -440,15 +470,18 @@
   <header>
     <div class="container nav-wrap">
       <div class="brand-group">
-        <img
-          class="logo-img"
-          src="logo-skyone.png"
-          alt="Logo SkyOne"
-          onerror="this.style.display='none';"
-        />
+        <div class="logo-pill-dark" id="top-logo-box">
+          <img
+            class="logo-img"
+            src="logo-skyone.png"
+            alt="SkyOne Real Estate Latam"
+            onerror="this.style.display='none';"
+          />
+          <span class="logo-placeholder-text" id="top-logo-txt">SkyOne</span>
+        </div>
         <div class="brand">
           <span class="brand-name">Oscar Benítez</span>
-          <span class="brand-sub" id="header-sub">SkyOne • Asesoría Inmobiliaria</span>
+          <span class="brand-sub" id="header-sub">SkyOne Real Estate Latam • Asesoría Inmobiliaria</span>
         </div>
       </div>
 
@@ -463,18 +496,9 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="hero-top-brand">
-          <img
-            class="hero-logo"
-            src="logo-skyone.png"
-            alt="Logo SkyOne"
-            onerror="this.style.display='none';"
-          />
-          <div class="badge" id="hero-badge">Asunción &amp; Gran Asunción • Paraguay</div>
-        </div>
-
+        <div class="badge" id="hero-badge">Asunción &amp; Gran Asunción • Paraguay</div>
         <h1 id="hero-title">Activos inmobiliarios seleccionados para <span>inversionistas exigentes</span></h1>
-        <p id="hero-desc">Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de la red SkyOne.</p>
+        <p id="hero-desc">Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de SkyOne Real Estate Latam.</p>
 
         <div class="hero-actions">
           <a id="hero-cta" class="btn-primary" href="https://wa.me/595981754632" target="_blank" rel="noopener">
@@ -487,14 +511,14 @@
       </div>
 
       <div class="portrait-card">
-        <div class="portrait-frame">
+        <div class="avatar-circle" id="avatar-circle">
           <img
-            src="foto-oscar.jpg"
+            src="foto-oscar.jpeg"
             alt="Oscar Benítez"
-            onload="document.getElementById('hero-photo-note').style.display='none';"
-            onerror="this.style.display='none'; document.getElementById('hero-photo-note').style.display='block';"
+            onload="document.getElementById('avatar-circle').classList.add('has-photo'); document.getElementById('avatar-txt').style.display='none';"
+            onerror="this.style.display='none'; document.getElementById('avatar-txt').style.display='block';"
           />
-          <span id="hero-photo-note" class="photo-placeholder">Subí <strong>foto-oscar.jpg</strong> al repositorio para mostrar tu foto aquí.</span>
+          <span class="avatar-placeholder" id="avatar-txt">Foto<br />Oscar</span>
         </div>
         <div class="portrait-name">Oscar Benítez</div>
         <div class="portrait-role" id="portrait-role">Asesor Inmobiliario • SkyOne</div>
@@ -582,8 +606,18 @@
 
   <footer>
     <div class="container footer-flex">
-      <div>
-        <strong>Oscar Benítez</strong> — SkyOne • Asunción, Paraguay
+      <div class="footer-brand-box">
+        <div class="footer-logo-wrap">
+          <img
+            class="logo-img"
+            src="logo-skyone.png"
+            alt="SkyOne Real Estate Latam"
+            onerror="this.style.display='none';"
+          />
+        </div>
+        <div>
+          <strong>Oscar Benítez</strong> — SkyOne Real Estate Latam • Asunción, Paraguay
+        </div>
       </div>
       <div>
         Tel / WhatsApp: <a href="https://wa.me/595981754632" target="_blank" rel="noopener">+595 981 754 632</a>
@@ -594,10 +628,10 @@
   <script>
     const translations = {
       es: {
-        headerSub: "SkyOne • Asesoría Inmobiliaria",
+        headerSub: "SkyOne Real Estate Latam • Asesoría Inmobiliaria",
         badge: "Asunción & Gran Asunción • Paraguay",
         heroTitle: 'Activos inmobiliarios seleccionados para <span>inversionistas exigentes</span>',
-        heroDesc: "Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de la red SkyOne.",
+        heroDesc: "Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de SkyOne Real Estate Latam.",
         heroCta: "Hablar directamente por WhatsApp",
         heroSecondary: "Ver opciones disponibles",
         portraitRole: "Asesor Inmobiliario • SkyOne",
@@ -634,10 +668,10 @@
         c3Btn: "Consultar por WhatsApp"
       },
       pt: {
-        headerSub: "SkyOne • Consultoria Imobiliária",
+        headerSub: "SkyOne Real Estate Latam • Consultoria Imobiliária",
         badge: "Assunção & Grande Assunção • Paraguai",
         heroTitle: 'Ativos imobiliários selecionados para <span>investidores exigentes</span>',
-        heroDesc: "Assessoria direta em imóveis, lançamentos na planta, locação e oportunidades no Paraguai com acompanhamento próximo e respaldo da rede SkyOne.",
+        heroDesc: "Assessoria direta em imóveis, lançamentos na planta, locação e oportunidades no Paraguai com acompanhamento próximo e respaldo da SkyOne Real Estate Latam.",
         heroCta: "Falar diretamente no WhatsApp",
         heroSecondary: "Ver opções disponíveis",
         portraitRole: "Consultor Imobiliário • SkyOne",
@@ -674,10 +708,10 @@
         c3Btn: "Consultar no WhatsApp"
       },
       en: {
-        headerSub: "SkyOne • Real Estate Advisory",
+        headerSub: "SkyOne Real Estate Latam • Real Estate Advisory",
         badge: "Asunción & Greater Asunción • Paraguay",
         heroTitle: 'Curated real estate assets for <span>discerning investors</span>',
-        heroDesc: "Direct advisory on properties, pre-construction developments, rentals, and opportunities in Paraguay with hands-on guidance and SkyOne backing.",
+        heroDesc: "Direct advisory on properties, pre-construction developments, rentals, and opportunities in Paraguay with hands-on guidance and SkyOne Real Estate Latam backing.",
         heroCta: "Chat directly on WhatsApp",
         heroSecondary: "View available options",
         portraitRole: "Real Estate Advisor • SkyOne",
