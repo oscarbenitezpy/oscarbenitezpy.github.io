@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oscar Benítez | SkyOne Black — Inversiones Inmobiliarias en Paraguay</title>
-  <meta name="description" content="Portafolio ejecutivo de inversiones inmobiliarias en Asunción y Paraguay. Oportunidades en USD, renta y plusvalía con asesoría personalizada de Oscar Benítez (SkyOne Black)." />
+  <title>Oscar Benítez | SkyOne — Inversiones Inmobiliarias en Paraguay</title>
+  <meta name="description" content="Portafolio de inversiones inmobiliarias en Asunción y Gran Asunción, Paraguay. Asesoría directa con Oscar Benítez en la red SkyOne." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --sky-blue: #06326B;
-      --sky-gray-light: #798490;
-      --sky-gray-dark: #394049;
-      --bg-black: #0B0D10;
-      --bg-surface: #14181E;
+      --navy-primary: #06326B;
+      --navy-deep: #04224A;
+      --slate-dark: #394049;
+      --slate-muted: #798490;
+      --bg-page: #F4F7FA;
+      --bg-soft: #E8EEF5;
       --white: #FFFFFF;
-      --text-soft: #C7CDD4;
-      --border-brand: rgba(121, 132, 144, 0.32);
+      --text-dark: #10233C;
+      --text-body: #394049;
+      --border-soft: #D3DCE6;
     }
 
     * {
@@ -27,16 +29,16 @@
     }
 
     body {
-      background-color: var(--bg-black);
-      color: var(--white);
+      background-color: var(--bg-page);
+      color: var(--text-dark);
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, .brand-font {
+    h1, h2, h3 {
       font-family: 'Open Sans', sans-serif;
-      letter-spacing: 0.01em;
+      color: var(--navy-primary);
     }
 
     .container {
@@ -50,16 +52,16 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(11, 13, 16, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-brand);
+      background: var(--white);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 2px 10px rgba(6, 50, 107, 0.05);
     }
 
     .nav-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 78px;
+      min-height: 76px;
       gap: 16px;
       flex-wrap: wrap;
     }
@@ -71,7 +73,7 @@
     }
 
     .logo-img {
-      height: 42px;
+      height: 44px;
       width: auto;
       object-fit: contain;
       display: block;
@@ -85,30 +87,30 @@
     .brand-name {
       font-size: 1.06rem;
       font-weight: 800;
-      color: var(--white);
+      color: var(--navy-primary);
       text-transform: uppercase;
     }
 
     .brand-sub {
       font-size: 0.72rem;
-      color: var(--sky-gray-light);
+      color: var(--slate-dark);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       font-weight: 600;
     }
 
     .lang-switch {
       display: inline-flex;
-      border: 1px solid var(--border-brand);
+      border: 1px solid var(--border-soft);
       border-radius: 6px;
       overflow: hidden;
-      background: var(--bg-surface);
+      background: var(--bg-page);
     }
 
     .lang-btn {
       background: transparent;
       border: none;
-      color: var(--sky-gray-light);
+      color: var(--slate-dark);
       padding: 7px 14px;
       font-size: 0.78rem;
       font-weight: 700;
@@ -118,176 +120,215 @@
     }
 
     .lang-btn.active {
-      background: var(--sky-blue);
+      background: var(--navy-primary);
       color: var(--white);
     }
 
-    /* Hero */
+    /* Hero en primer plano con foto y logo */
     .hero {
-      padding: 80px 0 68px;
-      border-bottom: 1px solid var(--border-brand);
-      background:
-        radial-gradient(circle at top right, rgba(6, 50, 107, 0.45), transparent 58%),
-        linear-gradient(180deg, var(--bg-black) 0%, #10151C 100%);
+      padding: 52px 0 60px;
+      background: linear-gradient(135deg, var(--white) 0%, var(--bg-soft) 100%);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-top-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .hero-logo {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+      background: var(--white);
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-soft);
     }
 
     .badge {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       color: var(--white);
-      background: var(--sky-gray-dark);
-      border: 1px solid var(--border-brand);
+      background: var(--navy-primary);
       padding: 6px 14px;
       border-radius: 6px;
-      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 4.4vw, 3.1rem);
+      font-size: clamp(1.9rem, 3.8vw, 2.85rem);
       font-weight: 800;
       line-height: 1.18;
-      max-width: 840px;
-      margin-bottom: 20px;
-      color: var(--white);
+      margin-bottom: 16px;
+      color: var(--navy-deep);
     }
 
     .hero h1 span {
-      color: var(--sky-gray-light);
+      color: var(--navy-primary);
+      background: var(--bg-soft);
+      padding: 0 8px;
+      border-radius: 4px;
     }
 
     .hero p {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--text-soft);
-      max-width: 700px;
-      margin-bottom: 34px;
+      font-size: 1.02rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background-color: var(--sky-blue);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: var(--navy-primary);
       color: var(--white);
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       font-size: 0.92rem;
-      padding: 14px 28px;
-      border-radius: 6px;
+      padding: 13px 24px;
+      border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .btn-primary:hover {
-      background-color: var(--sky-gray-dark);
+      background-color: var(--navy-deep);
       transform: translateY(-2px);
     }
 
-    /* Sections */
-    section {
-      padding: 72px 0;
-    }
-
-    .section-header {
-      margin-bottom: 36px;
-    }
-
-    .section-tag {
-      color: var(--sky-gray-light);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.5rem, 3vw, 2.15rem);
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    /* Advisor / Personal Brand Box */
-    .advisor-box {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 32px;
+    .btn-secondary {
+      display: inline-flex;
       align-items: center;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-brand);
-      border-left: 5px solid var(--sky-blue);
-      border-radius: 10px;
-      padding: 28px;
+      background-color: var(--white);
+      border: 1px solid var(--navy-primary);
+      color: var(--navy-primary);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
 
-    @media (max-width: 720px) {
-      .advisor-box {
-        grid-template-columns: 1fr;
-      }
+    .btn-secondary:hover {
+      background-color: var(--bg-soft);
     }
 
-    .advisor-photo-wrap {
-      width: 220px;
-      height: 220px;
+    /* Tarjeta de retrato en primer plano */
+    .portrait-card {
+      background: var(--white);
+      border: 1px solid var(--border-soft);
+      border-top: 5px solid var(--navy-primary);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(6, 50, 107, 0.08);
+      text-align: center;
+    }
+
+    .portrait-frame {
+      width: 100%;
+      aspect-ratio: 4 / 4.3;
       border-radius: 8px;
       overflow: hidden;
-      background: var(--sky-gray-dark);
-      border: 1px solid var(--border-brand);
+      background: var(--bg-soft);
+      border: 1px solid var(--border-soft);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 12px;
+      margin-bottom: 14px;
     }
 
-    @media (max-width: 720px) {
-      .advisor-photo-wrap {
-        width: 100%;
-        max-width: 260px;
-        height: 240px;
-      }
-    }
-
-    .advisor-photo-wrap img {
+    .portrait-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 6px;
       display: block;
     }
 
     .photo-placeholder {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-    }
-
-    .advisor-info h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: var(--white);
-    }
-
-    .advisor-role {
       font-size: 0.85rem;
+      color: var(--slate-dark);
+    }
+
+    .portrait-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 4px;
+    }
+
+    .portrait-role {
+      font-size: 0.82rem;
       font-weight: 700;
-      color: var(--sky-gray-light);
+      color: var(--slate-dark);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
+      letter-spacing: 0.07em;
+      margin-bottom: 6px;
     }
 
-    .advisor-info p {
-      color: var(--text-soft);
-      font-size: 0.95rem;
-      margin-bottom: 18px;
+    .portrait-phone {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy-deep);
     }
 
-    /* Pillars & Properties Grid */
+    /* Sections */
+    section {
+      padding: 64px 0;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--bg-soft);
+      color: var(--navy-primary);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 12px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.45rem, 2.8vw, 2.05rem);
+      font-weight: 800;
+    }
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -295,84 +336,88 @@
     }
 
     .card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-brand);
-      border-top: 4px solid var(--sky-blue);
-      border-radius: 8px;
-      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--border-soft);
+      border-top: 4px solid var(--navy-primary);
+      border-radius: 10px;
+      padding: 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 6px 18px rgba(6, 50, 107, 0.04);
     }
 
     .card h3 {
       font-size: 1.12rem;
       font-weight: 700;
-      color: var(--white);
       margin-bottom: 12px;
     }
 
     .card p {
-      color: var(--text-soft);
+      color: var(--text-body);
       font-size: 0.94rem;
     }
 
     .prop-meta {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--sky-gray-light);
+      display: inline-block;
+      background: var(--bg-soft);
+      color: var(--navy-primary);
+      font-size: 0.75rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
 
     .prop-price {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.32rem;
-      font-weight: 800;
+      background: var(--navy-primary);
       color: var(--white);
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 10px 14px;
+      border-radius: 6px;
       margin: 14px 0 18px;
+      text-align: center;
     }
 
     .prop-list {
       list-style: none;
-      margin-bottom: 24px;
-      color: var(--text-soft);
+      margin-bottom: 22px;
+      color: var(--text-body);
       font-size: 0.9rem;
     }
 
     .prop-list li {
       padding: 7px 0;
-      border-bottom: 1px solid rgba(121, 132, 144, 0.18);
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .btn-outline {
       display: inline-block;
       text-align: center;
-      background-color: var(--sky-gray-dark);
-      border: 1px solid var(--sky-gray-light);
+      background-color: var(--navy-primary);
       color: var(--white);
-      padding: 11px 18px;
-      border-radius: 6px;
+      padding: 12px 18px;
+      border-radius: 8px;
       text-decoration: none;
       font-family: 'Open Sans', sans-serif;
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      transition: all 0.2s ease;
+      transition: background-color 0.2s ease;
     }
 
     .btn-outline:hover {
-      background-color: var(--sky-blue);
-      border-color: var(--white);
+      background-color: var(--navy-deep);
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border-brand);
-      background: var(--sky-gray-dark);
-      padding: 40px 0;
+      background: var(--navy-primary);
       color: var(--white);
-      font-size: 0.88rem;
+      padding: 36px 0;
+      font-size: 0.9rem;
     }
 
     .footer-flex {
@@ -396,7 +441,6 @@
     <div class="container nav-wrap">
       <div class="brand-group">
         <img
-          id="skyone-logo"
           class="logo-img"
           src="logo-skyone.png"
           alt="Logo SkyOne"
@@ -404,7 +448,7 @@
         />
         <div class="brand">
           <span class="brand-name">Oscar Benítez</span>
-          <span class="brand-sub" id="header-sub">SkyOne Black • Asesoría Inmobiliaria</span>
+          <span class="brand-sub" id="header-sub">SkyOne • Asesoría Inmobiliaria</span>
         </div>
       </div>
 
@@ -417,119 +461,120 @@
   </header>
 
   <section class="hero">
-    <div class="container">
-      <div class="badge" id="hero-badge">Asunción &amp; Gran Asunción • Paraguay</div>
-      <h1 id="hero-title">Activos inmobiliarios seleccionados para <span>inversionistas exigentes</span></h1>
-      <p id="hero-desc">Asesoría estratégica en propiedades de alto valor, desarrollos en pozo, renta corporativa y oportunidades con proyección en dólares en Paraguay.</p>
-      <a id="hero-cta" class="btn-primary" href="https://wa.me/595981754632" target="_blank" rel="noopener">
-        Hablar directamente por WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" id="advisor-tag">Marca Personal &amp; Red</span>
-        <h2 id="advisor-title">Acompañamiento Directo en el Mercado</h2>
-      </div>
-
-      <div class="advisor-box">
-        <div class="advisor-photo-wrap" id="photo-box">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-top-brand">
           <img
-            id="advisor-photo"
-            src="foto-oscar.jpg"
-            alt="Oscar Benítez"
-            onload="document.getElementById('photo-note').style.display='none';"
-            onerror="this.style.display='none'; document.getElementById('photo-note').style.display='block';"
+            class="hero-logo"
+            src="logo-skyone.png"
+            alt="Logo SkyOne"
+            onerror="this.style.display='none';"
           />
-          <span id="photo-note" class="photo-placeholder">Subí <strong>foto-oscar.jpg</strong> al repositorio para mostrar tu foto aquí.</span>
+          <div class="badge" id="hero-badge">Asunción &amp; Gran Asunción • Paraguay</div>
         </div>
 
-        <div class="advisor-info">
-          <h3 id="adv-name">Oscar Benítez</h3>
-          <div class="advisor-role" id="adv-role">Asesor de Inversiones Inmobiliarias • Red SkyOne Black</div>
-          <p id="adv-bio">Trabajo conectando a inversionistas locales, brasileños e internacionales con oportunidades inmobiliarias seleccionadas en Asunción y Gran Asunción, respaldado por la red SkyOne.</p>
-          <a id="adv-cta" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20quisiera%20conversar%20sobre%20oportunidades%20de%20inversi%C3%B3n%20en%20Paraguay." target="_blank" rel="noopener">
-            Coordinar contacto directo
+        <h1 id="hero-title">Activos inmobiliarios seleccionados para <span>inversionistas exigentes</span></h1>
+        <p id="hero-desc">Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de la red SkyOne.</p>
+
+        <div class="hero-actions">
+          <a id="hero-cta" class="btn-primary" href="https://wa.me/595981754632" target="_blank" rel="noopener">
+            Hablar directamente por WhatsApp
+          </a>
+          <a id="hero-secondary" class="btn-secondary" href="#portafolio">
+            Ver opciones disponibles
           </a>
         </div>
       </div>
+
+      <div class="portrait-card">
+        <div class="portrait-frame">
+          <img
+            src="foto-oscar.jpg"
+            alt="Oscar Benítez"
+            onload="document.getElementById('hero-photo-note').style.display='none';"
+            onerror="this.style.display='none'; document.getElementById('hero-photo-note').style.display='block';"
+          />
+          <span id="hero-photo-note" class="photo-placeholder">Subí <strong>foto-oscar.jpg</strong> al repositorio para mostrar tu foto aquí.</span>
+        </div>
+        <div class="portrait-name">Oscar Benítez</div>
+        <div class="portrait-role" id="portrait-role">Asesor Inmobiliario • SkyOne</div>
+        <div class="portrait-phone">+595 981 754 632</div>
+      </div>
     </div>
   </section>
 
-  <section style="background: #10141A; border-top: 1px solid var(--border-brand); border-bottom: 1px solid var(--border-brand);">
+  <section style="background: var(--bg-soft); border-bottom: 1px solid var(--border-soft);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag" id="pillars-tag">Enfoque de Inversión</span>
-        <h2 id="pillars-title">Por qué invertir en Paraguay con SkyOne Black</h2>
+        <span class="section-tag" id="pillars-tag">Enfoque de Trabajo</span>
+        <h2 id="pillars-title">Por qué trabajar con nosotros</h2>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h3 id="p1-title">Proyección y Capitalización</h3>
-          <p id="p1-desc">Selección de ubicaciones estratégicas en ejes de crecimiento urbano y comercial con foco en valorización patrimonial de mediano y largo plazo.</p>
+          <h3 id="p1-title">Ubicación y Valorización</h3>
+          <p id="p1-desc">Selección de zonas con conectividad, movimiento comercial y proyección de crecimiento en Asunción y Gran Asunción.</p>
         </div>
         <div class="card">
-          <h3 id="p2-title">Renta y Liquidez</h3>
-          <p id="p2-desc">Opciones diseñadas tanto para renta tradicional o ejecutiva como para reventa estratégica, evaluando costos operativos, churrasqueira y despesas del edificio.</p>
+          <h3 id="p2-title">Renta y Claridad Operativa</h3>
+          <p id="p2-desc">Evaluación práctica de cada opción considerando renta estimada, áreas comunes, churrasqueira y despesas mensuales.</p>
         </div>
         <div class="card">
-          <h3 id="p3-title">Acompañamiento Directo</h3>
-          <p id="p3-desc">Atención personalizada desde el análisis inicial y la visita técnica hasta el cierre, con información clara para inversores locales e internacionales.</p>
+          <h3 id="p3-title">Atención Directa</h3>
+          <p id="p3-desc">Acompañamiento cercano desde la selección de opciones y visitas hasta el cierre de la operación.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="portafolio">
     <div class="container">
       <div class="section-header">
         <span class="section-tag" id="props-tag">Portafolio Destacado</span>
-        <h2 id="props-title">Oportunidades de Mayor Ticket</h2>
+        <h2 id="props-title">Opciones Disponibles</h2>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <div>
-            <div class="prop-meta" id="c1-zone">Asunción • Eje Corporativo</div>
-            <h3 id="c1-title">Unidad de Inversión — Torre Premium</h3>
-            <div class="prop-price" id="c1-price">Consultar en USD</div>
+            <div class="prop-meta" id="c1-zone">Asunción • Zona Estratégica</div>
+            <h3 id="c1-title">Unidad Residencial / Inversión</h3>
+            <div class="prop-price" id="c1-price">Consultar disponibilidad</div>
             <ul class="prop-list">
-              <li id="c1-f1">Tipología moderna con balcón y churrasqueira</li>
-              <li id="c1-f2">Amenities corporativos y seguridad 24 hs</li>
-              <li id="c1-f3">Detalle claro de despesas y proyección de renta</li>
+              <li id="c1-f1">Distribución funcional con balcón y churrasqueira</li>
+              <li id="c1-f2">Áreas comunes y seguridad</li>
+              <li id="c1-f3">Detalle transparente de despesas</li>
             </ul>
           </div>
-          <a id="c1-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20quiero%20recibir%20informaci%C3%B3n%20de%20la%20oportunidad%20en%20Eje%20Corporativo." target="_blank" rel="noopener">Solicitar dossier</a>
+          <a id="c1-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20quiero%20recibir%20informaci%C3%B3n%20de%20esta%20propiedad." target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
 
         <div class="card">
           <div>
-            <div class="prop-meta" id="c2-zone">Asunción • Zona Residencial Prime</div>
-            <h3 id="c2-title">Departamento en Pozo / Entrega Programada</h3>
-            <div class="prop-price" id="c2-price">Consultar en USD</div>
+            <div class="prop-meta" id="c2-zone">Asunción • Desarrollo / Pozo</div>
+            <h3 id="c2-title">Proyecto con Proyección de Renta</h3>
+            <div class="prop-price" id="c2-price">Consultar disponibilidad</div>
             <ul class="prop-list">
-              <li id="c2-f1">Alta demanda de alquiler residencial y temporario</li>
-              <li id="c2-f2">Espacio social con churrasqueira y áreas comunes</li>
-              <li id="c2-f3">Plan de pagos y estimación de despesas</li>
+              <li id="c2-f1">Atractivo para renta o uso propio</li>
+              <li id="c2-f2">Espacio social con churrasqueira</li>
+              <li id="c2-f3">Información de cuotas y despesas</li>
             </ul>
           </div>
-          <a id="c2-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20la%20unidad%20en%20Zona%20Residencial%20Prime." target="_blank" rel="noopener">Solicitar dossier</a>
+          <a id="c2-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20este%20desarrollo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
 
         <div class="card">
           <div>
-            <div class="prop-meta" id="c3-zone">Gran Asunción • Desarrollo &amp; Tierra</div>
-            <h3 id="c3-title">Activo Patrimonial de Alta Superficie</h3>
-            <div class="prop-price" id="c3-price">Consultar en USD</div>
+            <div class="prop-meta" id="c3-zone">Gran Asunción • Terreno / Inversión</div>
+            <h3 id="c3-title">Terreno para Proyecto o Renta</h3>
+            <div class="prop-price" id="c3-price">Consultar disponibilidad</div>
             <ul class="prop-list">
-              <li id="c3-f1">Conectividad clave y potencial de desarrollo</li>
-              <li id="c3-f2">Apto para estrategia patrimonial o comercial</li>
-              <li id="c3-f3">Documentación y análisis a medida</li>
+              <li id="c3-f1">Buen acceso y entorno en crecimiento</li>
+              <li id="c3-f2">Ideal para inversión a mediano plazo</li>
+              <li id="c3-f3">Asesoramiento directo en la visita</li>
             </ul>
           </div>
-          <a id="c3-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20quisiera%20consultar%20por%20el%20activo%20patrimonial%20en%20Gran%20Asunci%C3%B3n." target="_blank" rel="noopener">Solicitar dossier</a>
+          <a id="c3-btn" class="btn-outline" href="https://wa.me/595981754632?text=Hola%20Oscar%2C%20quisiera%20consultar%20por%20el%20terreno%20en%20Gran%20Asunci%C3%B3n." target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
       </div>
     </div>
@@ -538,7 +583,7 @@
   <footer>
     <div class="container footer-flex">
       <div>
-        <strong>Oscar Benítez</strong> — SkyOne Black • Asunción, Paraguay
+        <strong>Oscar Benítez</strong> — SkyOne • Asunción, Paraguay
       </div>
       <div>
         Tel / WhatsApp: <a href="https://wa.me/595981754632" target="_blank" rel="noopener">+595 981 754 632</a>
@@ -549,133 +594,124 @@
   <script>
     const translations = {
       es: {
-        headerSub: "SkyOne Black • Asesoría Inmobiliaria",
+        headerSub: "SkyOne • Asesoría Inmobiliaria",
         badge: "Asunción & Gran Asunción • Paraguay",
         heroTitle: 'Activos inmobiliarios seleccionados para <span>inversionistas exigentes</span>',
-        heroDesc: "Asesoría estratégica en propiedades de alto valor, desarrollos en pozo, renta corporativa y oportunidades con proyección en dólares en Paraguay.",
+        heroDesc: "Asesoría directa en propiedades, desarrollos en pozo, renta y oportunidades en Paraguay con acompañamiento cercano y respaldo de la red SkyOne.",
         heroCta: "Hablar directamente por WhatsApp",
-        advisorTag: "Marca Personal & Red",
-        advisorTitle: "Acompañamiento Directo en el Mercado",
-        advRole: "Asesor de Inversiones Inmobiliarias • Red SkyOne Black",
-        advBio: "Trabajo conectando a inversionistas locales, brasileños e internacionales con oportunidades inmobiliarias seleccionadas en Asunción y Gran Asunción, respaldado por la red SkyOne.",
-        advCta: "Coordinar contacto directo",
-        pillarsTag: "Enfoque de Inversión",
-        pillarsTitle: "Por qué invertir en Paraguay con SkyOne Black",
-        p1Title: "Proyección y Capitalización",
-        p1Desc: "Selección de ubicaciones estratégicas en ejes de crecimiento urbano y comercial con foco en valorización patrimonial de mediano y largo plazo.",
-        p2Title: "Renta y Liquidez",
-        p2Desc: "Opciones diseñadas tanto para renta tradicional o ejecutiva como para reventa estratégica, evaluando costos operativos, churrasqueira y despesas del edificio.",
-        p3Title: "Acompañamiento Directo",
-        p3Desc: "Atención personalizada desde el análisis inicial y la visita técnica hasta el cierre, con información clara para inversores locales e internacionales.",
+        heroSecondary: "Ver opciones disponibles",
+        portraitRole: "Asesor Inmobiliario • SkyOne",
+        pillarsTag: "Enfoque de Trabajo",
+        pillarsTitle: "Por qué trabajar con nosotros",
+        p1Title: "Ubicación y Valorización",
+        p1Desc: "Selección de zonas con conectividad, movimiento comercial y proyección de crecimiento en Asunción y Gran Asunción.",
+        p2Title: "Renta y Claridad Operativa",
+        p2Desc: "Evaluación práctica de cada opción considerando renta estimada, áreas comunes, churrasqueira y despesas mensuales.",
+        p3Title: "Atención Directa",
+        p3Desc: "Acompañamiento cercano desde la selección de opciones y visitas hasta el cierre de la operación.",
         propsTag: "Portafolio Destacado",
-        propsTitle: "Oportunidades de Mayor Ticket",
-        c1Zone: "Asunción • Eje Corporativo",
-        c1Title: "Unidad de Inversión — Torre Premium",
-        c1Price: "Consultar en USD",
-        c1F1: "Tipología moderna con balcón y churrasqueira",
-        c1F2: "Amenities corporativos y seguridad 24 hs",
-        c1F3: "Detalle claro de despesas y proyección de renta",
-        c1Btn: "Solicitar dossier",
-        c2Zone: "Asunción • Zona Residencial Prime",
-        c2Title: "Departamento en Pozo / Entrega Programada",
-        c2Price: "Consultar en USD",
-        c2F1: "Alta demanda de alquiler residencial y temporario",
-        c2F2: "Espacio social con churrasqueira y áreas comunes",
-        c2F3: "Plan de pagos y estimación de despesas",
-        c2Btn: "Solicitar dossier",
-        c3Zone: "Gran Asunción • Desarrollo & Tierra",
-        c3Title: "Activo Patrimonial de Alta Superficie",
-        c3Price: "Consultar en USD",
-        c3F1: "Conectividad clave y potencial de desarrollo",
-        c3F2: "Apto para estrategia patrimonial o comercial",
-        c3F3: "Documentación y análisis a medida",
-        c3Btn: "Solicitar dossier"
+        propsTitle: "Opciones Disponibles",
+        c1Zone: "Asunción • Zona Estratégica",
+        c1Title: "Unidad Residencial / Inversión",
+        c1Price: "Consultar disponibilidad",
+        c1F1: "Distribución funcional con balcón y churrasqueira",
+        c1F2: "Áreas comunes y seguridad",
+        c1F3: "Detalle transparente de despesas",
+        c1Btn: "Consultar por WhatsApp",
+        c2Zone: "Asunción • Desarrollo / Pozo",
+        c2Title: "Proyecto con Proyección de Renta",
+        c2Price: "Consultar disponibilidad",
+        c2F1: "Atractivo para renta o uso propio",
+        c2F2: "Espacio social con churrasqueira",
+        c2F3: "Información de cuotas y despesas",
+        c2Btn: "Consultar por WhatsApp",
+        c3Zone: "Gran Asunción • Terreno / Inversión",
+        c3Title: "Terreno para Proyecto o Renta",
+        c3Price: "Consultar disponibilidad",
+        c3F1: "Buen acceso y entorno en crecimiento",
+        c3F2: "Ideal para inversión a mediano plazo",
+        c3F3: "Asesoramiento directo en la visita",
+        c3Btn: "Consultar por WhatsApp"
       },
       pt: {
-        headerSub: "SkyOne Black • Consultoria Imobiliária",
+        headerSub: "SkyOne • Consultoria Imobiliária",
         badge: "Assunção & Grande Assunção • Paraguai",
         heroTitle: 'Ativos imobiliários selecionados para <span>investidores exigentes</span>',
-        heroDesc: "Assessoria estratégica em imóveis de alto padrão, lançamentos na planta, locação corporativa e oportunidades em dólar no Paraguai.",
+        heroDesc: "Assessoria direta em imóveis, lançamentos na planta, locação e oportunidades no Paraguai com acompanhamento próximo e respaldo da rede SkyOne.",
         heroCta: "Falar diretamente no WhatsApp",
-        advisorTag: "Marca Pessoal & Rede",
-        advisorTitle: "Acompanhamento Direto no Mercado",
-        advRole: "Consultor de Investimentos Imobiliários • Rede SkyOne Black",
-        advBio: "Atuo conectando investidores locais, brasileiros e internacionais a oportunidades imobiliárias selecionadas em Assunção e Grande Assunção, com o respaldo da rede SkyOne.",
-        advCta: "Agendar contato direto",
-        pillarsTag: "Tese de Investimento",
-        pillarsTitle: "Por que investir no Paraguai com a SkyOne Black",
-        p1Title: "Valorização Patrimonial",
-        p1Desc: "Seleção de localizações estratégicas em eixos de crescimento urbano e corporativo com foco em valorização no médio e longo prazo.",
-        p2Title: "Renda e Liquidez",
-        p2Desc: "Alternativas pensadas para locação tradicional, executiva ou revenda, com análise de churrasqueira, áreas comuns e despesas mensais.",
+        heroSecondary: "Ver opções disponíveis",
+        portraitRole: "Consultor Imobiliário • SkyOne",
+        pillarsTag: "Diretrizes de Atuação",
+        pillarsTitle: "Por que trabalhar conosco",
+        p1Title: "Localização e Valorização",
+        p1Desc: "Seleção de regiões com acesso, movimento comercial e potencial de crescimento em Assunção e Grande Assunção.",
+        p2Title: "Renda e Clareza Operacional",
+        p2Desc: "Análise prática de cada opção avaliando locação estimada, áreas comuns, churrasqueira e despesas mensais.",
         p3Title: "Atendimento Direto",
-        p3Desc: "Acompanhamento próximo da análise inicial e visita técnica até o fechamento, com transparência para investidores brasileiros e internacionais.",
+        p3Desc: "Acompanhamento próximo da escolha das opções e visitas até o fechamento do negócio.",
         propsTag: "Portfólio em Destaque",
-        propsTitle: "Oportunidades de Maior Ticket",
-        c1Zone: "Assunção • Eixo Corporativo",
-        c1Title: "Unidade de Investimento — Torre Premium",
-        c1Price: "Sob consulta em USD",
-        c1F1: "Planta moderna com varanda e churrasqueira",
-        c1F2: "Amenidades corporativas e segurança 24h",
-        c1F3: "Detalhamento de despesas e projeção de locação",
-        c1Btn: "Solicitar dossiê",
-        c2Zone: "Assunção • Zona Residencial Prime",
-        c2Title: "Apartamento na Planta / Entrega Programada",
-        c2Price: "Sob consulta em USD",
-        c2F1: "Forte demanda de locação residencial e executiva",
-        c2F2: "Espaço social com churrasqueira e áreas comuns",
-        c2F3: "Condições de pagamento e estimativa de despesas",
-        c2Btn: "Solicitar dossiê",
-        c3Zone: "Grande Assunção • Terrenos & Expansão",
-        c3Title: "Ativo Patrimonial de Ampla Área",
-        c3Price: "Sob consulta em USD",
-        c3F1: "Acesso estratégico e potencial de desenvolvimento",
-        c3F2: "Indicado para estratégia patrimonial ou comercial",
-        c3F3: "Documentação e análise sob medida",
-        c3Btn: "Solicitar dossiê"
+        propsTitle: "Opções Disponíveis",
+        c1Zone: "Assunção • Região Estratégica",
+        c1Title: "Unidade Residencial / Investimento",
+        c1Price: "Consultar disponibilidade",
+        c1F1: "Planta funcional com varanda e churrasqueira",
+        c1F2: "Áreas comuns e segurança",
+        c1F3: "Detalhamento transparente de despesas",
+        c1Btn: "Consultar no WhatsApp",
+        c2Zone: "Assunção • Empreendimento na Planta",
+        c2Title: "Projeto com Potencial de Locação",
+        c2Price: "Consultar disponibilidade",
+        c2F1: "Atrativo para locação ou moradia",
+        c2F2: "Espaço social com churrasqueira",
+        c2F3: "Informações de parcelas e despesas",
+        c2Btn: "Consultar no WhatsApp",
+        c3Zone: "Grande Assunção • Terreno / Investimento",
+        c3Title: "Terreno para Projeto ou Renda",
+        c3Price: "Consultar disponibilidade",
+        c3F1: "Bom acesso e entorno em expansão",
+        c3F2: "Indicado para investimento de médio prazo",
+        c3F3: "Acompanhamento direto na visita",
+        c3Btn: "Consultar no WhatsApp"
       },
       en: {
-        headerSub: "SkyOne Black • Real Estate Advisory",
+        headerSub: "SkyOne • Real Estate Advisory",
         badge: "Asunción & Greater Asunción • Paraguay",
         heroTitle: 'Curated real estate assets for <span>discerning investors</span>',
-        heroDesc: "Strategic advisory on high-value properties, pre-construction developments, executive rentals, and USD-denominated opportunities in Paraguay.",
+        heroDesc: "Direct advisory on properties, pre-construction developments, rentals, and opportunities in Paraguay with hands-on guidance and SkyOne backing.",
         heroCta: "Chat directly on WhatsApp",
-        advisorTag: "Personal Brand & Network",
-        advisorTitle: "Direct Market Guidance",
-        advRole: "Real Estate Investment Advisor • SkyOne Black Network",
-        advBio: "I connect local, Brazilian, and international investors with curated real estate opportunities across Asunción and Greater Asunción, backed by the SkyOne network.",
-        advCta: "Schedule direct contact",
-        pillarsTag: "Investment Approach",
-        pillarsTitle: "Why invest in Paraguay with SkyOne Black",
-        p1Title: "Appreciation & Growth",
-        p1Desc: "Targeted locations along key urban and commercial corridors focused on medium- to long-term capital appreciation.",
-        p2Title: "Yield & Liquidity",
-        p2Desc: "Options structured for traditional or executive leasing and strategic exit, with clear visibility into building fees and features.",
-        p3Title: "Direct Advisory",
-        p3Desc: "Hands-on guidance from initial evaluation and property tours to closing, tailored for international and local investors.",
+        heroSecondary: "View available options",
+        portraitRole: "Real Estate Advisor • SkyOne",
+        pillarsTag: "Our Approach",
+        pillarsTitle: "Why work with us",
+        p1Title: "Location & Appreciation",
+        p1Desc: "Selection of areas with strong connectivity, commercial activity, and growth potential across Asunción and Greater Asunción.",
+        p2Title: "Rental & Cost Clarity",
+        p2Desc: "Practical review of each option considering estimated rent, shared amenities, grill area, and monthly building fees.",
+        p3Title: "Direct Support",
+        p3Desc: "Hands-on guidance from property selection and tours through closing.",
         propsTag: "Featured Portfolio",
-        propsTitle: "Higher-Ticket Opportunities",
-        c1Zone: "Asunción • Corporate Corridor",
-        c1Title: "Investment Unit — Premium Tower",
-        c1Price: "Inquire in USD",
-        c1F1: "Modern layout with balcony and grill area",
-        c1F2: "Corporate amenities and 24/7 security",
-        c1F3: "Clear operating fee breakdown and rental outlook",
-        c1Btn: "Request dossier",
-        c2Zone: "Asunción • Prime Residential Area",
-        c2Title: "Pre-Construction / Scheduled Delivery",
-        c2Price: "Inquire in USD",
-        c2F1: "Strong demand for residential and executive rentals",
-        c2F2: "Social area with grill and shared amenities",
-        c2F3: "Payment schedule and estimated building fees",
-        c2Btn: "Request dossier",
-        c3Zone: "Greater Asunción • Land & Development",
-        c3Title: "Large-Footprint Land Asset",
-        c3Price: "Inquire in USD",
-        c3F1: "Key connectivity and development upside",
-        c3F2: "Suitable for land banking or commercial strategy",
-        c3F3: "Tailored due diligence and advisory",
-        c3Btn: "Request dossier"
+        propsTitle: "Available Options",
+        c1Zone: "Asunción • Strategic Area",
+        c1Title: "Residential / Investment Unit",
+        c1Price: "Inquire for availability",
+        c1F1: "Practical layout with balcony and grill area",
+        c1F2: "Shared amenities and security",
+        c1F3: "Clear breakdown of monthly fees",
+        c1Btn: "Inquire on WhatsApp",
+        c2Zone: "Asunción • Pre-Construction",
+        c2Title: "Development with Rental Potential",
+        c2Price: "Inquire for availability",
+        c2F1: "Suitable for rental or personal use",
+        c2F2: "Social area with grill",
+        c2F3: "Installment and fee details",
+        c2Btn: "Inquire on WhatsApp",
+        c3Zone: "Greater Asunción • Land / Investment",
+        c3Title: "Land Plot for Project or Yield",
+        c3Price: "Inquire for availability",
+        c3F1: "Good access and growing surroundings",
+        c3F2: "Suited for medium-term investment",
+        c3F3: "Direct guidance during visits",
+        c3Btn: "Inquire on WhatsApp"
       }
     };
 
@@ -692,12 +728,8 @@
       document.getElementById('hero-title').innerHTML = t.heroTitle;
       document.getElementById('hero-desc').textContent = t.heroDesc;
       document.getElementById('hero-cta').textContent = t.heroCta;
-
-      document.getElementById('advisor-tag').textContent = t.advisorTag;
-      document.getElementById('advisor-title').textContent = t.advisorTitle;
-      document.getElementById('adv-role').textContent = t.advRole;
-      document.getElementById('adv-bio').textContent = t.advBio;
-      document.getElementById('adv-cta').textContent = t.advCta;
+      document.getElementById('hero-secondary').textContent = t.heroSecondary;
+      document.getElementById('portrait-role').textContent = t.portraitRole;
 
       document.getElementById('pillars-tag').textContent = t.pillarsTag;
       document.getElementById('pillars-title').textContent = t.pillarsTitle;
