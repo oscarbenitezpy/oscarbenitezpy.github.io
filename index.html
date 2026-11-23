@@ -475,7 +475,8 @@
             class="logo-img"
             src="logo-skyone.png"
             alt="SkyOne Real Estate Latam"
-            onerror="this.style.display='none';"
+            onload="document.getElementById('top-logo-txt').style.display='none';"
+            onerror="this.style.display='none'; document.getElementById('top-logo-txt').style.display='inline';"
           />
           <span class="logo-placeholder-text" id="top-logo-txt">SkyOne</span>
         </div>
